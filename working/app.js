@@ -17,6 +17,9 @@ greet.english()
 greet.spanish()
 patterns.patt1()
 patterns.patt2.hello()
+patterns.patt3.hey()
+patterns.patt3.hellothere = "Changed hello there..."
+patterns.patt3.hey()
 
 
 
