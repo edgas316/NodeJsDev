@@ -20,4 +20,4 @@ arr.push(function () {
 arr.forEach(function (item) {
     item()
 })
-console.log(arr)
+console.log(arr)// [function function, function function]

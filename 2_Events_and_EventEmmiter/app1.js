@@ -1,4 +1,4 @@
-var Emitter = require('./emitter')
+var Emitter = require('./emitterCustom')
 
 var emtr = new Emitter()
 

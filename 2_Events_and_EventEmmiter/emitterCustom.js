@@ -6,7 +6,7 @@ Emitter.prototype.on = function (type, listener) {
     this.events[type] = this.events[type] || []
     this.events[type].push(listener)
 }
-// What this do is:
+// What this does is:
 // {
 //     onClickItem:[function () {}, function () {}, function () {}]
 // }
