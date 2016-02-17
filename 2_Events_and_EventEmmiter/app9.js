@@ -1,6 +1,6 @@
 'use strict'
 
-var EventEmitter = require('events');
+const EventEmitter = require('events');
 
 class Greetr extends EventEmitter {
     constructor() {
