@@ -9,6 +9,7 @@ var http = require('http')
 var fs = require('fs')
 var ip = '127.0.0.1'; // local host ip...
 var port = 1337;
+
 http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' })
     var html = fs.readFileSync(__dirname + '/index.htm', 'utf8');
@@ -20,4 +21,6 @@ http.createServer(function (req, res) {
 }).listen(port, ip, () => {
     console.log(`Server running at http://${ip}:${port}`)
 });
+
+// But this is not so effective see imroved code in app1.js
 
