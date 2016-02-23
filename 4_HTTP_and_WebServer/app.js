@@ -7,15 +7,17 @@
 
 var http = require('http')
 var fs = require('fs')
-
-http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'})
+var ip = '127.0.0.1'; // local host ip...
+var port = 1337;
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
     var html = fs.readFileSync(__dirname + '/index.htm', 'utf8');
     var message = 'Hello world...';
+
     html = html.replace('{Message}', message)
     res.end(html);
-    
-}).listen(1337, '127.0.0.1', () => {
-  console.log(`Server running at http://${'127.0.0.1'}:${1337}`)
-  });
+
+}).listen(port, ip, () => {
+    console.log(`Server running at http://${ip}:${port}`)
+});
 
