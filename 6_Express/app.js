@@ -5,6 +5,7 @@ var app = express();
 // to the invironment(server) our code is living in.
 var port = process.env.PORT || 3000
 
+<<<<<<< HEAD
 // Middlware - is a code that sits between two layers of software.
 // In the case of Express, sitting betwin the request and response.
 // using middleware:
@@ -19,16 +20,25 @@ app.use('/', function (req, res, next) {
 // get, post, delete and other... also colled verbs.
 app.get('/', function (req, res) {
     res.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet /></head><body><h1>Hello World!</h1></body></html>')
+=======
+// HTTP method: specifies the types of action the reques wishes to make
+// get, post, delete and other... also colled venbs.
+app.get('/', function (req, res) {
+    res.send('<html><head></head><body><h1>Hello World!</h1></body></html>')
+>>>>>>> 7e7a00bb177fe645f213f7e4e114f3eb5559791a
 })
 
 app.get('/api', function (req, res) {
     res.json({firstname:"Edwin", lastname:"Gasparian"})
 })
 
+<<<<<<< HEAD
 // using variables in url routing
 app.get('/person/:id', function (req, res) {
     res.send('<html><head></head><body><h1>Person: ' + req.params.id + '</h1></body></html>')
 })
 
+=======
+>>>>>>> 7e7a00bb177fe645f213f7e4e114f3eb5559791a
 app.listen(port);
 
